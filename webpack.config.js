@@ -11,7 +11,7 @@ module.exports = {
         filename: './build/bundle.js',
         sourceMapFilename: './build/bundle.map'
     },
-    devtool: '#source-map',
+    devtool: '#inline-source-map',
     module: {
         loaders: [
             {
@@ -25,8 +25,6 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
-        hot: true,
-        contentBase: './'
+        hot: true
     }
 };
-
